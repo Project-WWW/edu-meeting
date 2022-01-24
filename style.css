@@ -1,0 +1,100 @@
+/* вёрстка для дисплея 1366px (15.6 inch)*/
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: rgb(31,38,44);
+}
+/* стилизация левого блока */
+.uncoming{
+    padding: 30px 70px; /* первое значение по осе y вверх - низ; второе по x лево - право */
+    /* для расположения левого и правого в ряд */
+    display: flex;
+    flex-direction: row;
+}
+.uncoming_categories{
+    background-color: #fff;
+    width: fit-content; /*размер относительно размера содержимого.*/
+    padding: 30px;
+    height: fit-content;
+    border-radius: 20px;
+}
+hr{ /*горизонтальная линия*/
+    margin-top: 25px;
+}
+.uncoming_list{
+    margin-top: 15px;
+    list-style-type: none; /*скрыть маркеры списка*/
+}
+.uncoming_list li a{
+   color: rgb(0, 0, 0);
+   line-height: 30px; /*высота ряда- задаётся больше чем font size*/
+}
+.uncomming_button{
+   display: block; /* делаем гиперссылку блочным элементом чтобы работал margin*/
+   color: rgb(255, 255, 255);
+   background-color: rgb(161,44,47);
+   padding: 5px 30px;/* первое значение по осе y вверх - низ; второе по x лево - право */
+   border-radius: 20px;
+   margin-top: 20px;
+}
+/* стилизация карточки правого блока */
+.uncoming_timetable-card{
+    width: 350px;
+    border-radius: 20px;
+}
+.header_card{
+    height: 210px;
+    width: 100%;
+    background-image: url(./images/house_5.jpg);
+    background-size: cover; /*размер фонового изображения*/
+    background-position: 50% 50%; /*ачальнуая позиция фонового изображения*/
+}
+.header_card-price{
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    margin: 15px 0px 0px 15px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 800; /*полужирный шрифр*/
+}
+.footer_card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.footer_card-date{
+    padding: 20px;   
+}
+.footer_card-date span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-weight: 800;
+}
+.month{
+    color: rgb(161,44,47); 
+}
+.footer_card-desc h3{
+    display: block;
+    margin-bottom: 10px;
+}
+/* стилизация всего правого блока */
+.uncoming_timetable{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /*для переноса блока на ряд ниже*/
+    gap: 30px;
+    width: 800px; /*обязателен для работы flex-wrap: wrap*/
+    margin: auto; /*div по центру страницы*/
+}
